@@ -1,0 +1,76 @@
+{
+    "payments": [
+        {
+            "id": "PM001",
+            "description": "Monthly subscription",
+            "amount": 49.99,
+            "currency": "GBP",
+            "status": "paid",
+            "customer": "Acme Corp",
+            "date": "2026-05-28"
+        },
+        {
+            "id": "PM002",
+            "description": "Annual licence fee",
+            "amount": 299.00,
+            "currency": "GBP",
+            "status": "paid",
+            "customer": "Bright Ideas Ltd",
+            "date": "2026-05-27"
+        },
+        {
+            "id": "PM003",
+            "description": "Consulting invoice",
+            "amount": 850.00,
+            "currency": "GBP",
+            "status": "pending",
+            "customer": "Nova Digital",
+            "date": "2026-05-27"
+        },
+        {
+            "id": "PM004",
+            "description": "Hardware renewal",
+            "amount": 120.50,
+            "currency": "GBP",
+            "status": "failed",
+            "customer": "Starling Retail",
+            "date": "2026-05-26"
+        },
+        {
+            "id": "PM005",
+            "description": "SaaS platform fee",
+            "amount": 75.00,
+            "currency": "GBP",
+            "status": "paid",
+            "customer": "Pebble Finance",
+            "date": "2026-05-26"
+        },
+        {
+            "id": "PM006",
+            "description": "Event sponsorship",
+            "amount": 500.00,
+            "currency": "GBP",
+            "status": "pending",
+            "customer": "Acme Corp",
+            "date": "2026-05-25"
+        },
+        {
+            "id": "PM007",
+            "description": "Design services",
+            "amount": 640.00,
+            "currency": "GBP",
+            "status": "failed",
+            "customer": "Luminary Co",
+            "date": "2026-05-24"
+        },
+        {
+            "id": "PM008",
+            "description": "Monthly subscription",
+            "amount": 49.99,
+            "currency": "GBP",
+            "status": "paid",
+            "customer": "Nova Digital",
+            "date": "2026-05-23"
+        }
+    ]
+}
