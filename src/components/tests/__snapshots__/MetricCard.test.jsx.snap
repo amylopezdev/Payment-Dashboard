@@ -1,0 +1,20 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MetricCard > Matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="metric-card"
+  >
+    <div
+      class="metric-card__title"
+    >
+      Test
+    </div>
+    <div
+      class="metric-card__value"
+    >
+      2
+    </div>
+  </div>
+</DocumentFragment>
+`;

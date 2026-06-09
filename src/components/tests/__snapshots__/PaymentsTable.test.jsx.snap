@@ -1,0 +1,94 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`PaymentsTable > Matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="payments-table-wrapper"
+  >
+    <table
+      class="payments-table"
+    >
+      <thead>
+        <tr>
+          <th>
+            Payment ID
+          </th>
+          <th>
+            Description
+          </th>
+          <th>
+            Customer
+          </th>
+          <th>
+            Date
+          </th>
+          <th>
+            Amount
+          </th>
+          <th>
+            Status
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            class="col-id"
+          >
+            PM001
+          </td>
+          <td>
+            Monthly subscription
+          </td>
+          <td>
+            Acme Corp
+          </td>
+          <td>
+            2026-05-28
+          </td>
+          <td
+            class="col-amount"
+          >
+            £49.99
+          </td>
+          <td>
+            <span
+              class="status-badge status-badge--paid"
+            >
+              paid
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td
+            class="col-id"
+          >
+            PM002
+          </td>
+          <td>
+            Annual licence fee
+          </td>
+          <td>
+            Bright Ideas Ltd
+          </td>
+          <td>
+            2026-05-27
+          </td>
+          <td
+            class="col-amount"
+          >
+            £299.00
+          </td>
+          <td>
+            <span
+              class="status-badge status-badge--paid"
+            >
+              paid
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</DocumentFragment>
+`;
