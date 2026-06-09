@@ -1,18 +1,20 @@
 const PaymentsRow = ({ payment }) => {
-  const {id, description, customer, date, currency, amount, status} = payment;
+  const { id, description, customer, date, currency, amount, status } = payment;
   return (
     <tr>
-      <td>{id}</td>
+      <td className="col-id">{id}</td>
       <td>{description}</td>
       <td>{customer}</td>
       <td>{date}</td>
-      <td>
+      <td className="col-amount">
         {new Intl.NumberFormat("en-GB", {
           style: "currency",
           currency: currency,
         }).format(amount)}
       </td>
-      <td>{status}</td>
+      <td>
+        <span className={`status-badge status-badge--${status}`}>{status}</span>
+      </td>
     </tr>
   );
 };
