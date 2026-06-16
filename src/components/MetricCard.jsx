@@ -3,8 +3,8 @@ import "../styles/MetricCard.css";
 const MetricCard = ({ title, value }) => {
   return (
     <div className="metric-card">
-      <div className="metric-card__title">{title}</div>
-      <div className="metric-card__value">{value}</div>
+      <dt className="metric-card__title">{title}</dt>
+      <dd className="metric-card__value">{value}</dd>
     </div>
   );
 };
