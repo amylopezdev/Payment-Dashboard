@@ -3,8 +3,8 @@ import usePayments from "./hooks/usePayments";
 import calculateTotals from "./utils/calculateTotals";
 import PaymentsTable from "./components/PaymentsTable";
 import MetricCard from "./components/MetricCard";
-import "./App.css";
 import FilterButton from "./components/FilterButton";
+import "./App.css";
 
 const App = () => {
   const { recentPayments, error, isLoading } = usePayments();
@@ -37,10 +37,26 @@ const App = () => {
       </dl>
       <h2 className="section-heading">Recent Payments</h2>
       <ul className="payments-filters">
-        <FilterButton setActiveFilter={setActiveFilter} status="all" activeFilter={activeFilter} />
-        <FilterButton setActiveFilter={setActiveFilter} status="paid" activeFilter={activeFilter} />
-        <FilterButton setActiveFilter={setActiveFilter} status="pending" activeFilter={activeFilter} />
-        <FilterButton setActiveFilter={setActiveFilter} status="failed" activeFilter={activeFilter} />
+        <FilterButton
+          setActiveFilter={setActiveFilter}
+          status="all"
+          activeFilter={activeFilter}
+        />
+        <FilterButton
+          setActiveFilter={setActiveFilter}
+          status="paid"
+          activeFilter={activeFilter}
+        />
+        <FilterButton
+          setActiveFilter={setActiveFilter}
+          status="pending"
+          activeFilter={activeFilter}
+        />
+        <FilterButton
+          setActiveFilter={setActiveFilter}
+          status="failed"
+          activeFilter={activeFilter}
+        />
       </ul>
       <PaymentsTable payments={filteredPayments} />
     </main>
