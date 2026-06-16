@@ -1,5 +1,5 @@
 import PaymentsRow from "./PaymentsRow";
-import "./PaymentsTable.css";
+import "../styles/PaymentsTable.css";
 
 const PaymentsTable = ({ payments }) => {
   return (
