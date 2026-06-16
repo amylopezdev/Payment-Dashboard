@@ -53,7 +53,18 @@
 
 .payments-filters {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 16px;
   list-style: none;
+}
+
+@media (max-width: 640px) {
+  .app {
+    padding: 24px 16px;
+  }
+
+  .app-header__title {
+    font-size: 22px;
+  }
 }
