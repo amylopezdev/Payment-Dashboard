@@ -44,10 +44,18 @@
   color: var(--color-failed-text);
 }
 
+.section-heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 12px;
+}
+
 .payments-filters {
   display: flex;
   gap: 8px;
   margin-bottom: 16px;
+  list-style: none;
 }
 
 .payments-filters__btn {
@@ -58,6 +66,7 @@
   color: var(--color-text-secondary);
   font-size: 13px;
   font-weight: 500;
+  text-transform: capitalize;
   cursor: pointer;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
@@ -67,7 +76,8 @@
   color: var(--color-accent);
 }
 
-.payments-filters__btn--active {
+.payments-filters__btn--active,
+.payments-filters__btn--active:hover {
   background: var(--color-accent);
   border-color: var(--color-accent);
   color: #fff;
