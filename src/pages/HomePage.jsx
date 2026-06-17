@@ -1,11 +1,10 @@
 import { useState } from "react";
 import usePayments from "../hooks/usePayments";
-import calculateTotals from "../utils/calculateTotals";
 import Loading from "../components/Loading";
 import Error from "../components/Error";
+import MetricCards from "../components/MetricCards";
+import FilterButtons from "../components/FilterButtons";
 import PaymentsTable from "../components/PaymentsTable";
-import MetricCard from "../components/MetricCard";
-import FilterButton from "../components/FilterButton";
 import "../styles/HomePage.css";
 
 const HomePage = () => {
@@ -14,11 +13,7 @@ const HomePage = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
   if (isLoading) return <Loading />;
-  if (error) return <Error />;
-
-  const total = calculateTotals(recentPayments, "paid");
-  const pending = calculateTotals(recentPayments, "pending");
-  const failed = calculateTotals(recentPayments, "failed");
+  if (error) return <Error message={error} />;
 
   const filteredPayments =
     activeFilter === "all"
@@ -31,35 +26,12 @@ const HomePage = () => {
         <p className="home-page-header__eyebrow">Overview</p>
         <h1 className="home-page-header__title">Payments</h1>
       </header>
-      <dl className="metrics-grid">
-        <MetricCard title="Total Collected" value={total} />
-        <MetricCard title="Pending" value={pending} />
-        <MetricCard title="Failed" value={failed} />
-        <MetricCard title="Total Payments" value={recentPayments.length} />
-      </dl>
+      <MetricCards recentPayments={recentPayments} />
       <h2 className="section-heading">Recent Payments</h2>
-      <ul className="payments-filters">
-        <FilterButton
-          setActiveFilter={setActiveFilter}
-          status="all"
-          activeFilter={activeFilter}
-        />
-        <FilterButton
-          setActiveFilter={setActiveFilter}
-          status="paid"
-          activeFilter={activeFilter}
-        />
-        <FilterButton
-          setActiveFilter={setActiveFilter}
-          status="pending"
-          activeFilter={activeFilter}
-        />
-        <FilterButton
-          setActiveFilter={setActiveFilter}
-          status="failed"
-          activeFilter={activeFilter}
-        />
-      </ul>
+      <FilterButtons
+        setActiveFilter={setActiveFilter}
+        activeFilter={activeFilter}
+      />
       <PaymentsTable payments={filteredPayments} />
     </main>
   );
