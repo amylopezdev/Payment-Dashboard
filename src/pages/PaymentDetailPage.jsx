@@ -1,9 +1,10 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import usePayment from "../hooks/usePayment";
 import Loading from "../components/Loading";
 import Error from "../components/Error";
 import "../styles/PaymentsTable.css";
 import "../styles/PaymentDetailPage.css";
+import BackButton from "../components/BackButton";
 
 const PaymentDetailPage = () => {
   const { id } = useParams();
@@ -17,7 +18,7 @@ const PaymentDetailPage = () => {
 
   return (
     <main className="payment-detail-page">
-      <Link to="/" className="back-link">← Payments</Link>
+      <BackButton />
       <header className="payment-detail-header">
         <p className="payment-detail-header__eyebrow">Payment Details</p>
         <h1 className="payment-detail-header__title">{customer}</h1>
