@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom";
+
 const PaymentsRow = ({ payment }) => {
   const { id, description, customer, date, currency, amount, status } = payment;
   return (
     <tr>
-      <td className="col-id">{id}</td>
+      <td className="col-id">
+        <Link to={`/payments/${id}`}>{id}</Link>
+      </td>
       <td>{description}</td>
       <td>{customer}</td>
       <td>{date}</td>

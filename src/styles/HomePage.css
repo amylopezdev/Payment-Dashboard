@@ -1,14 +1,14 @@
-.app {
+.home-page {
   max-width: 1100px;
   margin: 0 auto;
   padding: 40px 24px;
 }
 
-.app-header {
+.home-page-header {
   margin-bottom: 32px;
 }
 
-.app-header__eyebrow {
+.home-page-header__eyebrow {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -17,7 +17,7 @@
   margin-bottom: 4px;
 }
 
-.app-header__title {
+.home-page-header__title {
   font-size: 28px;
   font-weight: 700;
   color: var(--color-text-primary);
@@ -30,8 +30,8 @@
   margin-bottom: 32px;
 }
 
-.app-loading,
-.app-error {
+.home-page-loading,
+.home-page-error {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +40,7 @@
   color: var(--color-text-secondary);
 }
 
-.app-error {
+.home-page-error {
   color: var(--color-failed-text);
 }
 
@@ -60,11 +60,11 @@
 }
 
 @media (max-width: 640px) {
-  .app {
+  .home-page {
     padding: 24px 16px;
   }
 
-  .app-header__title {
+  .home-page-header__title {
     font-size: 22px;
   }
 }
