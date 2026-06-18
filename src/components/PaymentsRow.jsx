@@ -9,7 +9,7 @@ const PaymentsRow = ({ payment }) => {
       </td>
       <td>{description}</td>
       <td>{customer}</td>
-      <td>{date}</td>
+      <td>{new Intl.DateTimeFormat("en-GB").format(new Date(date))}</td>
       <td className="col-amount">
         {new Intl.NumberFormat("en-GB", {
           style: "currency",
